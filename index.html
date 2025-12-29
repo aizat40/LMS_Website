@@ -53,6 +53,12 @@
             font-weight: 500;
         }
 
+        .nav-link:hover {
+            color: var(--premium-accent) !important;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
+
         /* --- HERO SECTION --- */
         .hero-section {
             padding: 140px 0 80px;
@@ -130,6 +136,21 @@
             color: white;
         }
 
+        .btn-login {
+            color: var(--premium-accent); 
+            background-color: transparent;
+            border-color: var(--premium-accent);
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 12px 30px;
+        }
+
+        .btn-login:hover {
+            background-color: var(--premium-accent);
+            color: white;
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+
         footer {
             background-color: #020617;
             border-top: 1px solid rgba(255,255,255,0.05);
@@ -152,7 +173,8 @@
                         <li class="nav-item"><a class="nav-link px-3" href="#">Course Catalog</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="#">Community</a></li>
                     </ul>
-                    <a href="#" class="btn btn-premium ms-lg-4">Sign Up</a>
+                    <a href="#" class="btn btn-login ms-lg-4">Login</a>
+                    <a href="#" class="btn btn-premium ms-lg-3">Sign Up</a>
                 </div>
             </div>
         </nav>
