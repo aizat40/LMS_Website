@@ -9,159 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="styles.css">
 
-    <title>LMS UTHM | Premium Dark Edition</title>
+    <title>LMS UTHM</title>
 
-   <style>
-        :root {
-            --premium-bg: #0f172a; 
-            --premium-card: #1e293b; 
-            --premium-accent: #8b5cf6; 
-            --premium-text-main: #f8fafc;
-            --premium-text-muted: #94a3b8;
-            --transition-smooth: all 0.4s cubic-bezier(.25,.8,.25,1);
-            
-            /* Level Colors */
-            --lvl-beginner: #10b981;
-            --lvl-intermediate: #f59e0b;
-            --lvl-expert: #ef4444;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--premium-bg);
-            color: var(--premium-text-main);
-            overflow-x: hidden;
-        }
-
-        /* --- NAVIGATION --- */
-        .navbar {
-            background-color: rgba(15, 23, 42, 0.95) !important;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            z-index: 1050;
-        }
-
-        .navbar-brand {
-            font-weight: 800;
-            color: var(--premium-accent) !important;
-            letter-spacing: -1px;
-        }
-
-        .nav-link {
-            color: var(--premium-text-main) !important;
-            font-weight: 500;
-        }
-
-        .nav-link:hover {
-            color: var(--premium-accent) !important;
-            text-decoration: underline;
-            text-underline-offset: 10px;
-        }
-
-        /* --- HERO SECTION --- */
-        .hero-section {
-            padding: 140px 0 80px;
-            background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15), transparent);
-        }
-
-        .hero-img {
-            border-radius: 2rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            object-fit: cover;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* --- CARDS & LEVELS --- */
-        .card {
-            background-color: var(--premium-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 1.25rem;
-            transition: var(--transition-smooth);
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--premium-accent);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .course-img {
-            height: 200px;
-            object-fit: cover;
-            border-top-left-radius: 1.25rem;
-            border-top-right-radius: 1.25rem;
-        }
-
-        /* Level Badges */
-        .badge-level {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-        }
-        .bg-beginner { background: rgba(16, 185, 129, 0.1); color: var(--lvl-beginner); border: 1px solid var(--lvl-beginner); }
-        .bg-intermediate { background: rgba(245, 158, 11, 0.1); color: var(--lvl-intermediate); border: 1px solid var(--lvl-intermediate); }
-        .bg-expert { background: rgba(239, 68, 68, 0.1); color: var(--lvl-expert); border: 1px solid var(--lvl-expert); }
-
-        /* --- BUTTONS --- */
-        .btn-premium {
-            background-color: var(--premium-accent);
-            color: white;
-            border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
-            border: none;
-            transition: var(--transition-smooth);
-        }
-
-        .btn-enroll {
-            background-color: transparent;
-            color: var(--premium-accent);
-            border-color: var(--premium-accent);
-        }
-
-        .btn-enroll:hover {
-            background-color: var(--premium-accent);
-            color: white;
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-            transform: translateY(-3px);
-        }
-
-        .btn-premium:hover {
-            background-color: #7c3aed;
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
-            color: white;
-        }
-
-        .btn-login {
-            color: var(--premium-accent); 
-            background-color: transparent;
-            border-color: var(--premium-accent);
-            border-radius: 50px;
-            font-weight: 600;
-            padding: 12px 30px;
-        }
-
-        .btn-login:hover {
-            background-color: var(--premium-accent);
-            color: white;
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-        }
-
-        footer {
-            background-color: #020617;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-    </style>
 </head>
 
 <body>
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
 
    <header>
-        <nav class="navbar navbar-expand-lg py-3">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
             <div class="container">
                 <a class="navbar-brand fs-3" href="#"><i class="bi bi-mortarboard-fill me-2"></i>LMS UTHM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -185,13 +45,13 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h1 class="display-3 fw-bold mb-4">Empowering <span style="color: var(--premium-accent)">Digital Learners</span></h1>
-                        <p class="lead text-secondary mb-5">Join LMS UTHM to explore world-class courses and track your professional growth.</p>
+                        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInLeft">Empowering <span style="color: var(--premium-accent)">Digital Learners</span></h1>
+                        <p class="lead text-secondary mb-5 animate__animated animate__fadeInLeft">Join LMS UTHM to explore world-class courses and track your professional growth.</p>
                         <div class="d-flex gap-3">
-                            <button class="btn btn-premium">Explore Catalog</button>
+                            <button class="btn btn-premium animate__animated animate__fadeInLeft">Explore Catalog</button>
                         </div>
                     </div>
-                    <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="col-lg-6 mt-5 mt-lg-0 animate__animated animate__fadeInRight">
                         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&h=800&auto=format&fit=crop" alt="Hero Image" class="img-fluid hero-img">
                     </div>
                 </div>
@@ -202,21 +62,21 @@
             <div class="container">
                 <div class="row g-4 text-center">
                     <div class="col-md-4">
-                        <div class="card p-4">
+                        <div class="card p-4 animate__animated reveal" style="animation-delay: 0s;">
                             <i class="bi bi-shield-check fs-1 text-info mb-3"></i>
                             <h4 class="card-title fw-bold text-light">Secured Payment</h4>
                             <p class="text-secondary small">Integrated with PayPal and credit card systems for paid courses</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card p-4">
+                        <div class="card p-4 animate__animated reveal" style="animation-delay: 0.2s;">
                             <i class="bi bi-bar-chart-line fs-1 text-warning mb-3"></i>
                             <h4 class="card-title fw-bold text-light">Progress Tracking</h4>
                             <p class="text-secondary small">Monitor your lessons and quizzes with detailed analytics.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card p-4">
+                        <div class="card p-4 animate__animated reveal" style="animation-delay: 0.4s;">
                             <i class="bi bi-patch-check fs-1 text-success mb-3"></i>
                             <h4 class="card-title fw-bold text-light">Digital Certificates</h4>
                             <p class="text-secondary small">Earn official certificates and badges upon completion.</p>
@@ -229,13 +89,13 @@
        <section class="py-5">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="fw-bold h1">Featured Courses</h2>
-                    <p class="text-secondary">Master skills from Beginner to Expert levels </p>
+                    <h2 class="fw-bold h1 animate__animated reveal" style="animation-delay: 0s;">Featured Courses</h2>
+                    <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Master skills from Beginner to Expert levels </p>
                 </div>
 
                 <div class="row g-4">
                     <div class="col-lg-4">
-                        <div class="card overflow-hidden">
+                        <div class="card overflow-hidden animate__animated reveal">
                             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&h=600&auto=format&fit=crop" class="course-img" alt="Beginner Course">
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-3">
@@ -253,7 +113,7 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="card overflow-hidden">
+                        <div class="card overflow-hidden animate__animated reveal" style="animation-delay: 0.2s;">
                             <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&h=600&auto=format&fit=crop" class="course-img" alt="Intermediate Course">
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-3">
@@ -271,7 +131,7 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="card overflow-hidden">
+                        <div class="card overflow-hidden animate__animated reveal" style="animation-delay: 0.4s;">
                             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&h=600&auto=format&fit=crop" class="course-img" alt="Expert Course">
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-3">
@@ -289,19 +149,159 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-4">
+    <a href="courses.html" class="btn btn-premium btn-lg px-3 py-2 animate__animated reveal" style="animation-delay: 0.6s;">
+        <i class="bi bi-search me-2"></i>Browse All Courses
+    </a>
+    <p class="text-secondary mt-3 small">Explore our full catalog of over 50+ professional courses</p>
+</div>
         </section>
+
+        <section class="py-5 border-top border-secondary border-opacity-10">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold h1 animate__animated reveal" style="animation-delay: 0s;">Meet Our Top Instructors</h2>
+            <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Learn from industry leaders and world-class academic experts</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 text-center instructor-card animate__animated reveal" style="animation-delay: 0.1s;">
+                    <div class="instructor-img-wrapper mb-3 mx-auto">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ali" class="rounded-circle shadow-sm" alt="Instructor 1">
+                    </div>
+                    <h5 class="fw-bold text-light mb-1">Dr. Ali</h5>
+                    <p class="text-secondary small mb-3">Senior Web Architect</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 text-center instructor-card animate__animated reveal" style="animation-delay: 0.3s;">
+                    <div class="instructor-img-wrapper mb-3 mx-auto">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Siti" class="rounded-circle shadow-sm" alt="Instructor 2">
+                    </div>
+                    <h5 class="fw-bold text-light mb-1">Pn. Siti</h5>
+                    <p class="text-secondary small mb-3">UI/UX Strategy Lead</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 text-center instructor-card animate__animated reveal" style="animation-delay: 0.5s;">
+                    <div class="instructor-img-wrapper mb-3 mx-auto">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ismail" class="rounded-circle shadow-sm" alt="Instructor 3">
+                    </div>
+                    <h5 class="fw-bold text-light mb-1">Dr. Ismail</h5>
+                    <p class="text-secondary small mb-3">Full Stack Developer</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-opacity-10" style="background-color: rgba(30, 41, 59, 0.5);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold h1 animate__animated reveal">What Our Students Say</h2>
+            <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Real experiences from students across UTHM</p>
+        </div>
+
+        <div id="studentCarousel" class="carousel slide animate__animated reveal" data-bs-ride="carousel" style="animation-delay: 0.4s;">
+            <div class="carousel-indicators" style="bottom: -50px;">
+                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card p-5 border-0 bg-transparent text-center">
+                                <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
+                                <p class="fs-4 fst-italic text-light mb-4">"The progress tracker feature is amazing! It helps me stay on top of my lessons and quizzes effectively."</p>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmad" class="rounded-circle me-3 border border-primary p-1" width="60" alt="Student 1">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0 text-white">Ahmad Daniel</h6>
+                                        <small class="text-secondary">FSKTM Student</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card p-5 border-0 bg-transparent text-center">
+                                <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
+                                <p class="fs-4 fst-italic text-light mb-4">"Finding courses in the catalog is so intuitive. The filters for difficulty levels make it easy to choose where to start."</p>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" class="rounded-circle me-3 border border-primary p-1" width="60" alt="Student 2">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0 text-white">Sarah Lim</h6>
+                                        <small class="text-secondary">Engineering Student</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card p-5 border-0 bg-transparent text-center">
+                                <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
+                                <p class="fs-4 fst-italic text-light mb-4">"I love how mobile-friendly this LMS is. I can track my progress and watch modules even on my smartphone."</p>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ismail" class="rounded-circle me-3 border border-primary p-1" width="60" alt="Student 3">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0 text-white">Aizat Haris</h6>
+                                        <small class="text-secondary">Information Technology Student</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon p-3 rounded-circle bg-dark border border-secondary"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon p-3 rounded-circle bg-dark border border-secondary"></span>
+            </button>
+        </div>
+    </div>
+</section>
     </main>
 
    <footer class="py-5 mt-5">
         <div class="container text-center">
-            <h5 class="fw-bold mb-4 text-white">LMS UTHM [cite: 49]</h5>
-            <p class="text-muted small mb-0">Fundamentals of Web Technology (BIW10103) [cite: 53]</p>
-            <p class="text-muted small mb-4">Instructor: Dr. Noryusliza Abdullah [cite: 53]</p>
-            <div class="small text-muted opacity-50">© 2025 Semester I 2025/2026 [cite: 52]</div>
+            <h5 class="fw-bold mb-4 text-white">LMS UTHM</h5>
+            <p class="text-secondary small mb-0">Fundamentals of Web Technology (BIW10103)</p>
+            <p class="text-secondary small mb-4">Instructor: Dr. Noryusliza Abdullah</p>
+            <div class="small text-secondary opacity-50">© 2025 Semester I 2025/2026</div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </html>
