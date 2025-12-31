@@ -80,3 +80,5 @@
     document.querySelectorAll('.reveal').forEach((el) => {
         observer.observe(el);
     });
+
+    

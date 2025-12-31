@@ -11,7 +11,6 @@
             --lvl-intermediate: #f59e0b;
             --lvl-expert: #ef4444;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--premium-bg);
@@ -285,4 +284,26 @@
 /* Kesan bayang pada gambar avatar */
 .carousel-item img {
     box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Pastikan Hero Section ada ruang yang cukup untuk slaid */
+.hero-section {
+    padding: 120px 0 80px;
+    min-height: 80vh; /* Pastikan tinggi konsisten */
+    display: flex;
+    align-items: center;
+}
+
+/* Indicators Styling */
+.carousel-indicators [button] {
+    background-color: var(--premium-accent);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* Animasi Fade yang smooth */
+.carousel-fade .carousel-item {
+    transition-duration: 1.0s;
 }
