@@ -1,309 +1,388 @@
  :root {
-            --premium-bg: #0f172a; 
-            --premium-card: #1e293b; 
-            --premium-accent: #8b5cf6; 
-            --premium-text-main: #f8fafc;
-            --premium-text-muted: #94a3b8;
-            --transition-smooth: all 0.4s cubic-bezier(.25,.8,.25,1);
-            
-            /* Level Colors */
-            --lvl-beginner: #10b981;
-            --lvl-intermediate: #f59e0b;
-            --lvl-expert: #ef4444;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--premium-bg);
-            color: var(--premium-text-main);
-            overflow-x: hidden;
-            padding-top: 80px;
-        }
+     --premium-bg: #0f172a;
+     --premium-card: #1e293b;
+     --premium-accent: #8b5cf6;
+     --premium-text-main: #f8fafc;
+     --premium-text-muted: #94a3b8;
+     --transition-smooth: all 0.4s cubic-bezier(.25, .8, .25, 1);
 
-        /* --- NAVIGATION --- */
-        .navbar {
-    /* Warna latar belakang gelap yang sedikit telus */
-    background-color: rgba(15, 23, 42, 0.9) !important; 
-    
-    /* Kesan Glassmorphism (Kabur di belakang) */
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
-    
-    /* Garisan nipis di bawah untuk membezakan dengan kandungan lain */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    
-    /* Pastikan z-index tinggi supaya sentiasa di atas kandungan lain */
-    z-index: 1000; 
-}
+     /* Level Colors */
+     --lvl-beginner: #10b981;
+     --lvl-intermediate: #f59e0b;
+     --lvl-expert: #ef4444;
+ }
 
-        .navbar-brand {
-            font-weight: 800;
-            color: var(--premium-accent) !important;
-            letter-spacing: -1px;
-        }
+ body {
+     font-family: 'Inter', sans-serif;
+     background-color: var(--premium-bg);
+     color: var(--premium-text-main);
+     overflow-x: hidden;
+     padding-top: 80px;
+ }
 
-      /* Keadaan asal nav-link */
-/* Keadaan asal teks navigasi */
-.nav-link {
+ /* Course Hero Styling */
+.course-hero-bg {
     position: relative;
-    color: var(--premium-text-main) !important;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding-bottom: 8px; /* Memberi ruang untuk garisan di bawah */
+    height: 400px; /* Anda boleh laras ketinggian ini */
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1920&auto=format&fit=crop'); 
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
 }
 
-/* Cipta garisan di bawah teks */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 100%; /* Lebar penuh, tapi kita akan 'sorok' menggunakan scale */
-    height: 2px;
-    bottom: 0; /* Jarak gap antara teks dan garisan */
-    left: 0;
-    background-color: var(--premium-accent);
-    
-    /* --- KUNCI ANIMASI TENGAH KE TEPI --- */
-    transform: scaleX(0); /* Sembunyikan garisan dengan mengecilkannya ke titik 0 */
-    transform-origin: center; /* Tetapkan titik mula animasi di tengah */
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animasi yang smooth */
+/* Breadcrumb Styling */
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.3);
+    content: "/";
 }
 
-/* Apabila mouse hover, garisan akan membesar ke saiz asal (1) */
-.nav-link:hover::after {
-    transform: scaleX(1);   
+.breadcrumb-item a:hover {
+    color: white !important;
+    text-shadow: 0 0 10px var(--premium-accent);
 }
 
-/* Tukar warna teks semasa hover */
-.nav-link:hover {
-    color: var(--premium-accent) !important;
-}
-        /* --- HERO SECTION --- */
-        .hero-section {
-            padding: 140px 0 80px;
-            background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15), transparent);
-        }
-
-        .hero-img {
-            border-radius: 2rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            object-fit: cover;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* --- CARDS & LEVELS --- */
-        .card {
-            background-color: var(--premium-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 1.25rem;
-            transition: var(--transition-smooth);
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--premium-accent);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .course-img {
-            height: 200px;
-            object-fit: cover;
-            border-top-left-radius: 1.25rem;
-            border-top-right-radius: 1.25rem;
-        }
-
-        /* Level Badges */
-        .badge-level {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-        }
-        .bg-beginner { background: rgba(16, 185, 129, 0.1); color: var(--lvl-beginner); border: 1px solid var(--lvl-beginner); }
-        .bg-intermediate { background: rgba(245, 158, 11, 0.1); color: var(--lvl-intermediate); border: 1px solid var(--lvl-intermediate); }
-        .bg-expert { background: rgba(239, 68, 68, 0.1); color: var(--lvl-expert); border: 1px solid var(--lvl-expert); }
-
-        /* --- BUTTONS --- */
-        .btn-premium {
-            background-color: var(--premium-accent);
-            color: white;
-            border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
-            border: none;
-            transition: var(--transition-smooth);
-        }
-
-        .btn-enroll {
-            background-color: transparent;
-            color: var(--premium-accent);
-            border-color: var(--premium-accent);
-        }
-
-        .btn-enroll:hover {
-            background-color: var(--premium-accent);
-            color: white;
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-            transform: translateY(-3px);
-        }
-
-        .btn-premium:hover {
-            background-color: #7c3aed;
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
-            color: white;
-        }
-
-        .btn-login {
-            color: var(--premium-accent); 
-            background-color: transparent;
-            border-color: var(--premium-accent);
-            border-radius: 50px;
-            font-weight: 600;
-            padding: 12px 30px;
-        }
-
-        .btn-login:hover {
-            background-color: var(--premium-accent);
-            color: white;
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-        }
-
-        footer {
-            background-color: #020617;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        /* Sembunyikan cursor asal pada seluruh page jika mahu */
-/* body { cursor: none; } */ 
-
-.cursor-dot,
-.cursor-outline {
-    pointer-events: none; /* Supaya cursor tidak menghalang klik */
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+/* Memastikan Hero Image Responsif di Mobile */
+@media (max-width: 991.98px) {
+    .course-hero-bg {
+        height: 300px;
+        text-align: center;
+    }
 }
 
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--premium-accent); /* Guna warna violet anda */
-}
+ /* --- NAVIGATION --- */
+ .navbar {
+     /* Warna latar belakang gelap yang sedikit telus */
+     background-color: rgba(15, 23, 42, 0.9) !important;
 
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--premium-accent);
-    transition: all 0.15s ease-out; /* Kelajuan ikut tetikus */
-}
+     /* Kesan Glassmorphism (Kabur di belakang) */
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
 
-/* Kesan apabila hover pada butang atau link */
-.cursor-active {
-    transform: translate(-50%, -50%) scale(1.5);
-    background-color: rgba(139, 92, 246, 0.2);
-    border-color: transparent;
-}
+     /* Garisan nipis di bawah untuk membezakan dengan kandungan lain */
+     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-.reveal {
-    opacity: 0;
-    transform: translateY(30px); /* Kedudukan asal sedikit ke bawah */
-    transition: all 0.5s ease;
-}
+     /* Pastikan z-index tinggi supaya sentiasa di atas kandungan lain */
+     z-index: 1000;
+ }
 
-/* Styling Khas untuk Instructor */
-.instructor-img-wrapper {
-    width: 120px;
-    height: 120px;
-    padding: 5px;
-    border: 2px solid rgba(139, 92, 246, 0.3); /* Warna violet lembut */
-    border-radius: 50%;
-    transition: var(--transition-smooth);
-}
+ .navbar-brand {
+     font-weight: 800;
+     color: var(--premium-accent) !important;
+     letter-spacing: -1px;
+ }
 
-.instructor-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+ /* Keadaan asal nav-link */
+ /* Keadaan asal teks navigasi */
+ .nav-link {
+     position: relative;
+     color: var(--premium-text-main) !important;
+     font-weight: 500;
+     transition: color 0.3s ease;
+     padding-bottom: 8px;
+     /* Memberi ruang untuk garisan di bawah */
+ }
 
-/* Kesan Hover pada Instructor Card */
-.instructor-card:hover .instructor-img-wrapper {
-    border-color: var(--premium-accent);
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); /* Kesan Glow Violet */
-}
+ /* Cipta garisan di bawah teks */
+ .nav-link::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     /* Lebar penuh, tapi kita akan 'sorok' menggunakan scale */
+     height: 2px;
+     bottom: 0;
+     /* Jarak gap antara teks dan garisan */
+     left: 0;
+     background-color: var(--premium-accent);
 
-.instructor-card h5 {
-    transition: color 0.3s ease;
-}
+     /* --- KUNCI ANIMASI TENGAH KE TEPI --- */
+     transform: scaleX(0);
+     /* Sembunyikan garisan dengan mengecilkannya ke titik 0 */
+     transform-origin: center;
+     /* Tetapkan titik mula animasi di tengah */
+     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+     /* Animasi yang smooth */
+ }
 
-.instructor-card:hover h5 {
-    color: var(--premium-accent) !important;
-}
+ /* Apabila mouse hover, garisan akan membesar ke saiz asal (1) */
+ .nav-link:hover::after {
+     transform: scaleX(1);
+ }
 
-/* Sosmed Button Hover */
-.instructor-card .btn-outline-secondary:hover {
-    background-color: var(--premium-accent);
-    border-color: var(--premium-accent);
-    color: white;
-}
+ /* Tukar warna teks semasa hover */
+ .nav-link:hover {
+     color: var(--premium-accent) !important;
+ }
 
-/* Custom Styles for Testimonials */
-#studentCarousel {
-    padding-bottom: 80px; /* Ruang untuk indicators */
-}
+ /* Warna teks apabila aktif */
+ .nav-link.active {
+     color: var(--premium-accent) !important;
+     font-weight: 700;
+     /* Jadikan lebih tebal sedikit */
+ }
 
-/* Tukar warna dot indicator */
-.carousel-indicators [button] {
-    background-color: var(--premium-text-muted);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
+ /* Memastikan garisan (pseudo-element ::after) kekal muncul apabila aktif */
+ .nav-link.active::after {
+     width: 100%;
+     transform: scaleX(1);
+     /* Kekalkan lebar garisan 100% */
+     background-color: var(--premium-accent);
+ }
 
-.carousel-indicators .active {
-    background-color: var(--premium-accent) !important;
-    width: 30px; /* Jadikan lebih panjang sedikit untuk efek moden */
-    border-radius: 10px;
-}
+ /* --- HERO SECTION --- */
+ .hero-section {
+     padding: 140px 0 80px;
+     background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15), transparent);
+ }
 
-/* Butang Navigasi */
-.carousel-control-prev, .carousel-control-next {
-    width: 5%;
-    opacity: 0.8;
-}
+ .hero-img {
+     border-radius: 2rem;
+     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+     object-fit: cover;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+ }
 
-.carousel-control-prev:hover, .carousel-control-next:hover {
-    opacity: 1;
-}
+ /* --- CARDS & LEVELS --- */
+ .card {
+     background-color: var(--premium-card);
+     border: 1px solid rgba(255, 255, 255, 0.05);
+     border-radius: 1.25rem;
+     transition: var(--transition-smooth);
+     height: 100%;
+ }
 
-/* Kesan bayang pada gambar avatar */
-.carousel-item img {
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
-}
+ .card:hover {
+     transform: translateY(-10px);
+     border-color: var(--premium-accent);
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+ }
 
-/* Pastikan Hero Section ada ruang yang cukup untuk slaid */
-.hero-section {
-    padding: 120px 0 80px;
-    min-height: 80vh; /* Pastikan tinggi konsisten */
-    display: flex;
-    align-items: center;
-}
+ .course-img {
+     height: 200px;
+     object-fit: cover;
+     border-top-left-radius: 1.25rem;
+     border-top-right-radius: 1.25rem;
+ }
 
-/* Indicators Styling */
-.carousel-indicators [button] {
-    background-color: var(--premium-accent);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 5px;
-}
+ /* Level Badges */
+ .badge-level {
+     font-size: 0.75rem;
+     text-transform: uppercase;
+     font-weight: 700;
+     padding: 0.5rem 1rem;
+     border-radius: 50px;
+ }
 
-/* Animasi Fade yang smooth */
-.carousel-fade .carousel-item {
-    transition-duration: 1.0s;
-}
+ .bg-beginner {
+     background: rgba(16, 185, 129, 0.1);
+     color: var(--lvl-beginner);
+     border: 1px solid var(--lvl-beginner);
+ }
+
+ .bg-intermediate {
+     background: rgba(245, 158, 11, 0.1);
+     color: var(--lvl-intermediate);
+     border: 1px solid var(--lvl-intermediate);
+ }
+
+ .bg-expert {
+     background: rgba(239, 68, 68, 0.1);
+     color: var(--lvl-expert);
+     border: 1px solid var(--lvl-expert);
+ }
+
+ /* --- BUTTONS --- */
+ .btn-premium {
+     background-color: var(--premium-accent);
+     color: white;
+     border-radius: 50px;
+     padding: 12px 30px;
+     font-weight: 600;
+     border: none;
+     transition: var(--transition-smooth);
+ }
+
+ .btn-enroll {
+     background-color: transparent;
+     color: var(--premium-accent);
+     border-color: var(--premium-accent);
+ }
+
+ .btn-enroll:hover {
+     background-color: var(--premium-accent);
+     color: white;
+     box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+     transform: translateY(-3px);
+ }
+
+ .btn-premium:hover {
+     background-color: #7c3aed;
+     box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+     color: white;
+ }
+
+ .btn-login {
+     color: var(--premium-accent);
+     background-color: transparent;
+     border-color: var(--premium-accent);
+     border-radius: 50px;
+     font-weight: 600;
+     padding: 12px 30px;
+ }
+
+ .btn-login:hover {
+     background-color: var(--premium-accent);
+     color: white;
+     box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+ }
+
+ footer {
+     background-color: #020617;
+     border-top: 1px solid rgba(255, 255, 255, 0.05);
+ }
+
+ /* Sembunyikan cursor asal pada seluruh page jika mahu */
+ /* body { cursor: none; } */
+
+ .cursor-dot,
+ .cursor-outline {
+     pointer-events: none;
+     /* Supaya cursor tidak menghalang klik */
+     position: fixed;
+     top: 0;
+     left: 0;
+     transform: translate(-50%, -50%);
+     border-radius: 50%;
+     z-index: 9999;
+     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+ }
+
+ .cursor-dot {
+     width: 8px;
+     height: 8px;
+     background-color: var(--premium-accent);
+     /* Guna warna violet anda */
+ }
+
+ .cursor-outline {
+     width: 40px;
+     height: 40px;
+     border: 2px solid var(--premium-accent);
+     transition: all 0.15s ease-out;
+     /* Kelajuan ikut tetikus */
+ }
+
+ /* Kesan apabila hover pada butang atau link */
+ .cursor-active {
+     transform: translate(-50%, -50%) scale(1.5);
+     background-color: rgba(139, 92, 246, 0.2);
+     border-color: transparent;
+ }
+
+ .reveal {
+     opacity: 0;
+     transform: translateY(30px);
+     /* Kedudukan asal sedikit ke bawah */
+     transition: all 0.5s ease;
+ }
+
+ /* Styling Khas untuk Instructor */
+ .instructor-img-wrapper {
+     width: 120px;
+     height: 120px;
+     padding: 5px;
+     border: 2px solid rgba(139, 92, 246, 0.3);
+     /* Warna violet lembut */
+     border-radius: 50%;
+     transition: var(--transition-smooth);
+ }
+
+ .instructor-img-wrapper img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /* Kesan Hover pada Instructor Card */
+ .instructor-card:hover .instructor-img-wrapper {
+     border-color: var(--premium-accent);
+     transform: scale(1.1) rotate(5deg);
+     box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+     /* Kesan Glow Violet */
+ }
+
+ .instructor-card h5 {
+     transition: color 0.3s ease;
+ }
+
+ .instructor-card:hover h5 {
+     color: var(--premium-accent) !important;
+ }
+
+ /* Sosmed Button Hover */
+ .instructor-card .btn-outline-secondary:hover {
+     background-color: var(--premium-accent);
+     border-color: var(--premium-accent);
+     color: white;
+ }
+
+ /* Custom Styles for Testimonials */
+ #studentCarousel {
+     padding-bottom: 80px;
+     /* Ruang untuk indicators */
+ }
+
+ /* Tukar warna dot indicator */
+ .carousel-indicators [button] {
+     background-color: var(--premium-text-muted);
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+ }
+
+ .carousel-indicators .active {
+     background-color: var(--premium-accent) !important;
+     width: 30px;
+     /* Jadikan lebih panjang sedikit untuk efek moden */
+     border-radius: 10px;
+ }
+
+ /* Butang Navigasi */
+ .carousel-control-prev,
+ .carousel-control-next {
+     width: 5%;
+     opacity: 0.8;
+ }
+
+ .carousel-control-prev:hover,
+ .carousel-control-next:hover {
+     opacity: 1;
+ }
+
+ /* Kesan bayang pada gambar avatar */
+ .carousel-item img {
+     box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+ }
+
+ /* Pastikan Hero Section ada ruang yang cukup untuk slaid */
+ .hero-section {
+     padding: 120px 0 80px;
+     min-height: 80vh;
+     /* Pastikan tinggi konsisten */
+     display: flex;
+     align-items: center;
+ }
+
+ /* Indicators Styling */
+ .carousel-indicators [button] {
+     background-color: var(--premium-accent);
+     width: 12px;
+     height: 12px;
+     border-radius: 50%;
+     margin: 0 5px;
+ }
+
+ /* Animasi Fade yang smooth */
+ .carousel-fade .carousel-item {
+     transition-duration: 1.0s;
+ }

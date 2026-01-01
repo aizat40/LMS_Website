@@ -132,20 +132,43 @@ form{
     font-weight: 600;
 }
 
-.social-icons{
+.btn:hover{
+    background: #7c3aed !important;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
+    gap: 10px; /* Cara moden untuk jarakkan elemen */
 }
 
-.social-icons a{
+.social-icons a {
     display: inline-flex;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 45px;  /* Beri saiz tetap supaya nampak simetri */
+    height: 45px;
     border: 2px solid #8b5cf6 !important;
-    font-size: 24px;
+    border-radius: 50%; /* Jadikan bulat untuk gaya premium */
     color: #8b5cf6 !important;
-    margin: 0 8px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Penting untuk animasi smooth */
 }
 
+/* Pastikan ikon di dalam ikut warna bapa (tag a) */
+.social-icons a i {
+    font-size: 20px;
+    color: inherit; 
+}
+
+.social-icons a:hover {
+    background-color: #8b5cf6 !important;
+    color: white !important; /* Ikon akan jadi putih */
+    transform: translateY(-2px); /* Kesan melompat sedikit ke atas */
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); /* Kesan glow premium */
+}
 .toggle-box{
     position: absolute;
     width: 100%;

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="LMS UTHM - Premium Learning Management System">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Courses</title>
+
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container">
+                <a class="navbar-brand fs-3" href="#"><i class="bi bi-mortarboard-fill me-2"></i>LMS UTHM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 active" href="#">Course Catalog</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Community</a></li>
+                    </ul>
+                    <a href="login.html" class="btn btn-login ms-lg-4">Login</a>
+                    <a href="login.html" class="btn btn-premium ms-lg-3">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-hero-bg d-flex align-items-center">
+            <div class="container text-center text-lg-start">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <nav aria-label="breadcrumb" class="animate__animated animate__fadeInDown">
+                            <ol class="breadcrumb justify-content-center justify-content-lg-start">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none"
+                                        style="color: white">Home</a></li>
+                                <li class="breadcrumb-item" style="color: var(--premium-accent);" aria-current="page">
+                                    Course Catalog</li>
+                            </ol>
+                        </nav>
+
+                        <h1 class="display-3 fw-bold text-white mb-3 animate__animated animate__fadeInLeft">
+                            Course <span style="color: var(--premium-accent)">Catalog</span>
+                        </h1>
+                        <p class="lead text-white-50 mb-4 animate__animated animate__fadeInLeft"
+                            style="animation-delay: 0.2s;">
+                            Explore our world-class digital courses and start your learning journey with UTHM experts.
+                            [cite: 4, 11]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-5 mt-5">
+            <div class="container">
+                <div class="card p-4 border-secondary border-opacity-10 animate__animated animate__fadeIn"
+                    style="background-color: rgba(30, 41, 59, 0.3);">
+                    <div class="row g-3">
+                        <div class="col-lg-4">
+                            <div class="input-group">
+                                <span
+                                    class="input-group-text bg-dark border-secondary border-opacity-25 text-secondary">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" id="courseSearch" class="form-control"
+                                    placeholder="Search courses...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-5">
+            <div class="container">
+                <div class="row g-4" id="courseGrid">
+                    <div id="noResults" class="text-center py-5 d-none">
+                        <i class="bi bi-exclamation-circle fs-1 text-secondary"></i>
+                        <p class="text-secondary mt-3">No courses found matching your search.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item">
+                        <div class="card h-100 overflow-hidden animate__animated reveal">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&h=600&auto=format&fit=crop"
+                                class="course-img" alt="Beginner Course">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge-level bg-beginner">Beginner </span>
+                                    <span class="text-warning small"><i class="bi bi-star-fill"></i> 4.9 (1.2k ratings)
+                                    </span>
+                                </div>
+                                <h4 class="card-title mb-2 text-light fw-bold">Web Design Fundamentals </h4>
+                                <p class="text-secondary small">Learn the basics of HTML5, CSS3, and responsive design.
+                                </p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ali"
+                                        class="rounded-circle me-2" width="30" alt="Instructor">
+                                    <small class="text-secondary">By <strong>Dr. Ali</strong> </small>
+                                </div>
+                                <div
+                                    class="mt-auto pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
+                                    <small class="text-secondary"><i class="bi bi-clock me-1"></i> 10 Weeks </small>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-outline-light rounded-pill">Preview </button>
+                                        <button class="btn btn-sm btn-premium rounded-pill">Enroll Free </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 course-item">
+                        <div class="card h-100 overflow-hidden animate__animated reveal" style="animation-delay: 0.2s;">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&h=600&auto=format&fit=crop"
+                                class="course-img" alt="Intermediate Course">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge-level bg-intermediate">Intermediate </span>
+                                    <span class="text-warning small"><i class="bi bi-star-fill"></i> 4.7 (850 ratings)
+                                    </span>
+                                </div>
+                                <h4 class="card-title mb-2 text-light fw-bold">JavaScript Mastery </h4>
+                                <p class="text-secondary small">Master modern JS, ES6+, and asynchronous programming
+                                    logic. </p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Siti"
+                                        class="rounded-circle me-2" width="30" alt="Instructor">
+                                    <small class="text-secondary">By <strong>Pn. Siti</strong> </small>
+                                </div>
+                                <div
+                                    class="mt-auto pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
+                                    <small class="text-secondary"><i class="bi bi-clock me-1"></i> 12 Weeks </small>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-outline-light rounded-pill">Preview </button>
+                                        <button class="btn btn-sm btn-premium rounded-pill">Enroll [cite: 15]</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 course-item">
+                        <div class="card h-100 overflow-hidden animate__animated reveal" style="animation-delay: 0.4s;">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&h=600&auto=format&fit=crop"
+                                class="course-img" alt="Expert Course">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge-level bg-expert">Expert </span>
+                                    <span class="text-warning small"><i class="bi bi-star-fill"></i> 5.0 (500 ratings)
+                                    </span>
+                                </div>
+                                <h4 class="card-title mb-2 text-light fw-bold">Full Stack Architecture </h4>
+                                <p class="text-secondary small">Scale applications using React, Node, and Cloud infra.
+                                </p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ismail"
+                                        class="rounded-circle me-2" width="30" alt="Instructor">
+                                    <small class="text-secondary">By <strong>Dr. Ismail</strong> </small>
+                                </div>
+                                <div
+                                    class="mt-auto pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
+                                    <small class="text-secondary"><i class="bi bi-clock me-1"></i> 20 Weeks </small>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-outline-light rounded-pill">Preview </button>
+                                        <button class="btn btn-sm btn-premium rounded-pill">Enroll [cite: 15]</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-5 mt-5">
+        <div class="container text-center">
+            <h5 class="fw-bold mb-4 text-white">LMS UTHM</h5>
+            <p class="text-secondary small mb-0">Fundamentals of Web Technology (BIW10103)</p>
+            <p class="text-secondary small mb-4">Instructor: Dr. Noryusliza Abdullah</p>
+            <div class="small text-secondary opacity-50">© 2025 Semester I 2025/2026</div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+
+</html>
