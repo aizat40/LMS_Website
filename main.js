@@ -81,36 +81,56 @@ document.querySelectorAll('.reveal').forEach((el) => {
     observer.observe(el);
 });
 
-// Tunggu sehingga semua elemen dimuatkan
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('courseSearch');
+    const difficultySelect = document.getElementById('filterDifficulty');
+    const lecturerSelect = document.getElementById('filterLecturer');
+    const categoryBtns = document.querySelectorAll('.filter-btn');
     const courseCards = document.querySelectorAll('.course-item');
     const noResultsMsg = document.getElementById('noResults');
 
-    if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            let hasVisibleCards = false;
+    let currentCategory = 'all';
 
-            courseCards.forEach(card => {
-                const title = card.querySelector('.card-title').innerText.toLowerCase();
-                const description = card.querySelector('.text-secondary').innerText.toLowerCase();
+    function filterCourses() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedDifficulty = difficultySelect.value;
+        const selectedLecturer = lecturerSelect.value;
+        let visibleCount = 0;
 
-                // Semak jika kata kunci carian wujud dalam tajuk atau deskripsi
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.classList.remove('d-none'); // Tunjukkan kad
-                    hasVisibleCards = true;
-                } else {
-                    card.classList.add('d-none'); // Sembunyikan kad
-                }
-            });
+        courseCards.forEach(card => {
+            const title = card.querySelector('.card-title').innerText.toLowerCase();
+            const category = card.getAttribute('data-category');
+            const difficulty = card.getAttribute('data-difficulty');
+            const lecturer = card.getAttribute('data-lecturer');
 
-            // Papar mesej "No Results" jika tiada kad yang sepadan
-            if (!hasVisibleCards) {
-                noResultsMsg.classList.remove('d-none');
+            // Logik Padanan (Match)
+            const matchesSearch = title.includes(searchTerm);
+            const matchesCategory = currentCategory === 'all' || category === currentCategory;
+            const matchesDifficulty = selectedDifficulty === 'all' || difficulty === selectedDifficulty;
+            const matchesLecturer = selectedLecturer === 'all' || lecturer === selectedLecturer;
+
+            if (matchesSearch && matchesCategory && matchesDifficulty && matchesLecturer) {
+                card.classList.remove('d-none');
+                visibleCount++;
             } else {
-                noResultsMsg.classList.add('d-none');
+                card.classList.add('d-none');
             }
         });
+
+        noResultsMsg.classList.toggle('d-none', visibleCount > 0);
     }
+
+    // Event Listeners
+    searchInput.addEventListener('input', filterCourses);
+    difficultySelect.addEventListener('change', filterCourses);
+    lecturerSelect.addEventListener('change', filterCourses);
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            currentCategory = this.getAttribute('data-filter');
+            filterCourses();
+        });
+    });
 });
