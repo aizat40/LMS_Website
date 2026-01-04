@@ -72,7 +72,7 @@ form{
 }
 
 .input-box{
-    margin: 30px 0;
+    margin: 25px 0;
     position: relative;
 }
 
@@ -88,6 +88,7 @@ form{
    color: #f8fafc;
    font-weight: 500;
 }
+
 .input-box input:focus{
     background-color: #0f172a;
     border-color: #8b5cf6 !important; /* Warna Violet Aksen anda */
@@ -236,4 +237,34 @@ form{
     background: transparent;
     border: 2px solid #fff;
     box-shadow: none;
+}
+
+
+/* Style for the Input Box containing the Select */
+.input-box select {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #0f172a !important; /* Matches your deep dark theme */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #f8fafc !important;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    appearance: none; /* Removes default browser arrow */
+    transition: all 0.3s ease;
+}
+
+/* Style for the Dropdown Options */
+.input-box select option {
+    background: #1e293b; /* Slightly lighter slate for contrast */
+    color: #f8fafc;
+    padding: 10px;
+}
+
+/* Focus State (Glow effect) */
+.input-box select:focus {
+    border-color: #8b5cf6 !important; /* Your Premium Violet accent */
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
 }

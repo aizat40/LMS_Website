@@ -18,7 +18,15 @@
      color: var(--premium-text-main);
      overflow-x: hidden;
      padding-top: 80px;
+    /* Make page a column flex so footer sits at bottom */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
  }
+
+main {
+    flex: 1 0 auto;
+}
 
  /* Course Hero Styling */
 .course-hero-bg {
@@ -193,6 +201,18 @@
      border-top-right-radius: 1.25rem;
  }
 
+ /* Pastikan ada transition supaya pergerakan nampak smooth */
+.course-item .card {
+    transition: var(--transition-smooth);
+}
+
+/* Gunakan selector yang lebih kuat */
+.course-item:hover .card {
+    transform: translateY(-5px) !important; /* Gunakan !important jika animasi menghalangnya */
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.3) !important;
+    border-color: var(--premium-accent) !important;
+}
+
  /* Level Badges */
  .badge-level {
      font-size: 0.75rem;
@@ -231,6 +251,20 @@
      transition: var(--transition-smooth);
  }
 
+ .btn-preview{
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    transition: var(--transition-smooth);
+ }
+
+ .btn-preview:hover{
+    background-color: white;
+    color: var(--premium-bg);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    transform: translateY(-3px);
+ }
+
  .btn-enroll {
      background-color: transparent;
      color: var(--premium-accent);
@@ -248,6 +282,7 @@
      background-color: #7c3aed;
      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
      color: white;
+     transform: translateY(-3px);
  }
 
  .btn-login {
@@ -268,6 +303,7 @@
  footer {
      background-color: #020617;
      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
  }
 
  /* Sembunyikan cursor asal pada seluruh page jika mahu */
@@ -415,3 +451,43 @@
  .carousel-fade .carousel-item {
      transition-duration: 1.0s;
  }
+
+ .forum-card {
+    background-color: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.25rem;
+    transition: var(--transition-smooth);
+    margin-bottom: 30px !important;
+}
+
+.forum-card:hover {
+    border-color: var(--premium-accent);
+    transform: translateX(10px); /* Efek slide sedikit ke kanan */
+}
+
+.btn-forum-action {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 14px;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-forum-action:hover, .btn-forum-action.active {
+    color: var(--premium-accent);
+}
+
+.forum-nav .nav-link {
+    color: #94a3b8;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.forum-nav .nav-link.active {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--premium-accent) !important;
+}
+
+.text-accent { color: var(--premium-accent); }
+/* Tambahkan padding bawah pada seksyen forum */
