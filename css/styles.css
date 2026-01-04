@@ -26,6 +26,7 @@
 
 main {
     flex: 1 0 auto;
+    min-height: 70vh;
 }
 
  /* Course Hero Styling */
@@ -185,7 +186,6 @@ main {
      border: 1px solid rgba(255, 255, 255, 0.05);
      border-radius: 1.25rem;
      transition: var(--transition-smooth);
-     height: 100%;
  }
 
  .card:hover {
@@ -491,3 +491,45 @@ main {
 
 .text-accent { color: var(--premium-accent); }
 /* Tambahkan padding bawah pada seksyen forum */
+
+.dashboard-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--premium-accent);
+        }
+
+        .progress {
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .progress-bar {
+            background-color: var(--premium-accent);
+        }
+
+       .footer-premium {
+    background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.8));
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    flex-shrink: 0;
+}
+
+.footer-link {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--premium-accent) !important;
+    transform: translateY(-3px);
+    display: inline-block;
+}
+
+/* Ensure branding icon matches the theme color */
+.footer-premium h5 i {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}

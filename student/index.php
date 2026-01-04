@@ -14,28 +14,6 @@ $username = $_SESSION['username'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../css/styles.css">
-
-    <style>
-        .dashboard-card {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .dashboard-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--premium-accent);
-        }
-
-        .progress {
-            height: 8px;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .progress-bar {
-            background-color: var(--premium-accent);
-        }
-    </style>
 </head>
 
 <body>
@@ -166,6 +144,7 @@ $username = $_SESSION['username'];
                     </div>
                 </div>
 
+
                 <div class="col-lg-4 mt-5 mt-lg-0">
                     <h4 class="fw-bold text-white mb-4">Deadlines</h4>
                     <div class="card dashboard-card p-4 rounded-4">
@@ -194,6 +173,34 @@ $username = $_SESSION['username'];
             </div>
         </div>
     </main>
+
+    <footer class="footer-premium py-5 mt-5">
+        <div class="container">
+            <hr class="border-secondary opacity-10 mb-5">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <h5 class="fw-bold text-white mb-2">
+                        <i class="bi bi-mortarboard-fill me-2" style="color: var(--premium-accent)"></i>LMS UTHM
+                    </h5>
+                    <p class="text-secondary small mb-1">Fundamentals of Web Technology (BIW10103)</p>
+                    <p class="text-secondary small mb-0">Instructor: Dr. Noryusliza Abdullah</p>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3 mb-3">
+                        <a href="#" class="footer-link text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-link text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="footer-link text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-link text-secondary"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="small text-secondary opacity-50">
+                        © 2025 Semester I 2025/2026 • Universiti Tun Hussein Onn Malaysia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
