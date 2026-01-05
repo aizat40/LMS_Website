@@ -1,6 +1,50 @@
 <?php
-session_start();
+include '../config.php';
+
+if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'student') {
+    header("Location: ../login.html");
+    exit();
+}
 $username = $_SESSION['username'];
+
+$id=$_SESSION['user_id'];
+
+$sql="SELECT * FROM enroll_course WHERE id=?";
+$stmt=$conn->prepare($sql);
+$stmt->bind_param("i",$id);
+$stmt->execute();
+$result=$stmt->get_result();
+$row = $result->fetch_assoc();
+
+$sql2="SELECT COUNT(*) AS activeCourse FROM enroll_course WHERE studentID=? and status='active'";
+$stmt2=$conn->prepare($sql2);
+$stmt2->bind_param("i",$id);
+$stmt2->execute();
+$result2=$stmt2->get_result();
+$user_row = $result2->fetch_assoc();
+$activeCourse = $user_row['activeCourse'];
+
+$sql3="SELECT COUNT(*) AS completeModule FROM enroll_course WHERE studentID=? and status='complete'";
+$stmt3=$conn->prepare($sql3);
+$stmt3->bind_param("i",$id);
+$stmt3->execute();
+$result3=$stmt3->get_result();
+$completeModule_row = $result3->fetch_assoc();
+$completeModule = $completeModule_row['completeModule'];
+
+// 1. Kira Purata Progress (Overall Progress)
+$sql4 = "SELECT AVG(current_progress) AS overallProgress FROM enroll_course WHERE studentID = ?";
+$stmt4 = $conn->prepare($sql4);
+$stmt4->bind_param("i", $id);
+$stmt4->execute();
+$result4 = $stmt4->get_result();
+$progress_row = $result4->fetch_assoc();
+
+// Jika pelajar belum daftar apa-apa kursus, letakkan 0 supaya tidak keluar ralat
+$overallProgress = $progress_row['overallProgress'] ? round($progress_row['overallProgress']) : 0;
+
+$stmt->close();
+$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,11 +113,12 @@ $username = $_SESSION['username'];
                 <div class="col-md-4">
                     <div class="card dashboard-card p-4 rounded-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
-                                <i class="bi bi-journal-text text-primary fs-4"></i>
+                            <div class="rounded-circle bg-primary bg-opacity-10 d-flex align-items-center justify-content-center me-3"
+                                style="width: 70px; height: 70px; flex-shrink: 0;">
+                                <i class="bi bi-journal-text text-primary fs-3"></i>
                             </div>
                             <div>
-                                <h3 class="fw-bold text-white mb-0">3</h3>
+                                <h3 class="fw-bold text-white mb-0"><?php echo htmlspecialchars($activeCourse); ?></h3>
                                 <small class="text-secondary">Active Courses</small>
                             </div>
                         </div>
@@ -82,11 +127,12 @@ $username = $_SESSION['username'];
                 <div class="col-md-4">
                     <div class="card dashboard-card p-4 rounded-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-success bg-opacity-10 p-3 me-3">
-                                <i class="bi bi-award text-success fs-4"></i>
+                            <div class="rounded-circle bg-success bg-opacity-10 d-flex align-items-center justify-content-center me-3"
+                                style="width: 70px; height: 70px; flex-shrink: 0;">
+                                <i class="bi bi-award text-success fs-3"></i>
                             </div>
                             <div>
-                                <h3 class="fw-bold text-white mb-0">12</h3>
+                                <h3 class="fw-bold text-white mb-0"><?php echo htmlspecialchars($completeModule); ?></h3>
                                 <small class="text-secondary">Completed Modules</small>
                             </div>
                         </div>
@@ -95,11 +141,12 @@ $username = $_SESSION['username'];
                 <div class="col-md-4">
                     <div class="card dashboard-card p-4 rounded-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-warning bg-opacity-10 p-3 me-3">
-                                <i class="bi bi-clock-history text-warning fs-4"></i>
+                            <div class="rounded-circle bg-warning bg-opacity-10 d-flex align-items-center justify-content-center me-3"
+                                style="width: 70px; height: 70px; flex-shrink: 0;">
+                                <i class="bi bi-clock-history text-warning fs-3"></i>
                             </div>
                             <div>
-                                <h3 class="fw-bold text-white mb-0">85%</h3>
+                                <h3 class="fw-bold text-white mb-0"><?php echo htmlspecialchars($overallProgress); ?>%</h3>
                                 <small class="text-secondary">Overall Progress</small>
                             </div>
                         </div>
@@ -122,7 +169,7 @@ $username = $_SESSION['username'];
                                 <small class="text-secondary">75% Complete</small>
                             </div>
                             <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                <a href="#" class="btn btn-premium rounded-pill px-4">Continue</a>
+                                <a href="course_view.php?course=web-design" class="btn btn-premium rounded-pill px-4">Continue</a>
                             </div>
                         </div>
                     </div>
@@ -154,7 +201,7 @@ $username = $_SESSION['username'];
                                 <small class="text-danger uppercase">JAN</small>
                             </div>
                             <div>
-                                <h6 class="fw-bold mb-0">Project Submission</h6>
+                                <h6 class="text-light fw-bold mb-0">Project Submission</h6>
                                 <small class="text-secondary">Web Tech (BIW10103)</small>
                             </div>
                         </div>
@@ -164,7 +211,7 @@ $username = $_SESSION['username'];
                                 <small class="text-warning uppercase">JAN</small>
                             </div>
                             <div>
-                                <h6 class="fw-bold mb-0">Quiz 2: JS Logic</h6>
+                                <h6 class="text-light fw-bold mb-0">Quiz 2: JS Logic</h6>
                                 <small class="text-secondary">Fundamentals Course</small>
                             </div>
                         </div>

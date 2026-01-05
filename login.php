@@ -16,6 +16,7 @@ include 'config.php';
             // Password is correct, start a session
             $_SESSION['username'] = $username;
             $_SESSION['role'] = $row['role'];
+            $_SESSION['user_id'] = $row['id'];
 
             if ($_SESSION['role'] === 'lecturer') {
                 header("Location: admin/index.php?status=authorized");
