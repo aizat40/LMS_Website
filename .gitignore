@@ -1,0 +1,23 @@
+# --- KESELAMATAN & RAHSIA ---
+.env
+config.php
+*.pem
+*.key
+private_key.json
+student/stripe_config.php
+
+# --- PENGURUSAN DEPENDENSI ---
+# Kita tidak perlu push folder vendor kerana ia boleh diinstall semula
+vendor/
+libs/
+
+# --- FAIL SISTEM & LOG ---
+*.log
+.DS_Store
+Thumbs.db
+
+# --- IDE (Editor) ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

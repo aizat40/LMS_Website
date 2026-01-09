@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="LMS UTHM - Premium Learning Management System">
-
+    <link rel="icon" href="img/logotab.png" type="image/png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/styles.css">
 
-    <title>Courses</title>
+    <title>Browse Course || LMS UTHM</title>
 
 </head>
 
@@ -23,7 +23,11 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top py-3">
             <div class="container">
-                <a class="navbar-brand fs-3" href="#"><i class="bi bi-mortarboard-fill me-2"></i>LMS UTHM</a>
+                <a class="navbar-brand fs-3 fw-semibold text-light" href="index.php">
+                    <img src="img/uthmLogo.png" alt="Logo" class="me-2"
+                        style="height: 30px; filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2));">
+                    Online Learning UTHM
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -115,7 +119,7 @@
                                 <option value="all" selected>All Lecturers</option>
                                 <option value="Dr. Ali">Dr. Ali</option>
                                 <option value="Pn. Siti">Pn. Siti</option>
-                                <option value="Dr. Ismail">Dr. Ismail</option>
+                                <option value="Dr. Kamal">Dr. Kamal</option>
                             </select>
                         </div>
                     </div>
@@ -145,7 +149,7 @@
                                 <p class="text-secondary small">Learn the basics of HTML5, CSS3, and responsive design.
                                 </p>
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ali"
+                                    <img src="img/ali.jpg"
                                         class="rounded-circle me-2" width="30" alt="Instructor">
                                     <small class="text-secondary">By <strong>Dr. Ali</strong> </small>
                                 </div>
@@ -153,14 +157,19 @@
                                     class="mt-auto pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
                                     <small class="text-secondary"><i class="bi bi-clock me-1"></i> 10 Weeks </small>
                                     <div class="d-flex gap-2">
-                                        <button class="btn btn-sm btn-preview rounded-pill" data-bs-toggle="modal" data-bs-target="#coursePreviewModal"
-                                            data-course-title="Web Design Fundamentals" data-course-level="Beginner" data-course-duration="10 Weeks"
-                                            data-course-instructor="Dr. Ali" data-course-lessons="25 Lessons"
+                                        <button class="btn btn-sm btn-preview rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#coursePreviewModal"
+                                            data-course-title="Web Design Fundamentals" data-course-level="Beginner"
+                                            data-course-duration="10 Weeks" data-course-instructor="Dr. Ali"
+                                            data-course-lessons="25 Lessons"
                                             data-course-description="Learn the foundations of modern web development. Master HTML5 structure, CSS3 styling, and the principles of responsive design to create stunning websites."
                                             data-course-learn="HTML5 Semantic Tags, CSS Box Model, Responsive Media Queries, Flexbox Layouts">
                                             Preview
                                         </button>
-                                        <button class="btn btn-sm btn-premium rounded-pill">Enroll Free </button>
+                                        <button type="button" class="btn btn-sm btn-premium rounded-pill"
+                                            data-bs-toggle="modal" data-bs-target="#loginRequiredModal">
+                                            Enroll Now
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +191,7 @@
                                 <p class="text-secondary small">Master modern JS, ES6+, and asynchronous programming
                                     logic. </p>
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Siti"
+                                    <img src="img/siti.jpg"
                                         class="rounded-circle me-2" width="30" alt="Instructor">
                                     <small class="text-secondary">By <strong>Pn. Siti</strong> </small>
                                 </div>
@@ -190,14 +199,18 @@
                                     class="mt-auto pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
                                     <small class="text-secondary"><i class="bi bi-clock me-1"></i> 12 Weeks </small>
                                     <div class="d-flex gap-2">
-                                        <button class="btn btn-sm btn-preview rounded-pill" data-bs-toggle="modal" data-bs-target="#coursePreviewModal"
-                                            data-course-title="JavaScript Mastery" data-course-level="Intermediate" data-course-duration="12 Weeks"
+                                        <button class="btn btn-sm btn-preview rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#coursePreviewModal" data-course-title="JavaScript Mastery"
+                                            data-course-level="Intermediate" data-course-duration="12 Weeks"
                                             data-course-instructor="Pn. Siti" data-course-lessons="35 Lessons"
                                             data-course-description="Take your web skills to the next level by mastering the logic of the web. Explore ES6+ features, DOM manipulation, and how to handle asynchronous data like a pro."
                                             data-course-learn="ES6+ Syntax, DOM Manipulation, Promises & Async/Await, API Fetching">
                                             Preview
                                         </button>
-                                        <button class="btn btn-sm btn-premium rounded-pill">Enroll</button>
+                                       <button type="button" class="btn btn-sm btn-premium rounded-pill"
+                                            data-bs-toggle="modal" data-bs-target="#loginRequiredModal">
+                                            Enroll Now
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +218,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-6 course-item" data-category="web" data-difficulty="Expert"
-                        data-lecturer="Dr. Ismail">
+                        data-lecturer="Dr. Kamal">
                         <div class="card h-100 overflow-hidden animate__animated reveal" style="animation-delay: 0.4s;">
                             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&h=600&auto=format&fit=crop"
                                 class="course-img" alt="Expert Course">
@@ -215,13 +228,14 @@
                                     <span class="text-warning small"><i class="bi bi-star-fill"></i> 5.0 (500 ratings)
                                     </span>
                                 </div>
-                                <h4 class="card-title mb-2 text-light fw-bold">Full Stack Architecture </h4>
-                                <p class="text-secondary small">Scale applications using React, Node, and Cloud infrastructure.
+                                <h4 class="card-title mb-2 text-light fw-bold">Laravel Bootcamp </h4>
+                                <p class="text-secondary small">Scale applications using React, Node, and Cloud
+                                    infrastructure.
                                 </p>
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ismail"
+                                    <img src="img/kamal.jpg"
                                         class="rounded-circle me-2" width="30" alt="Instructor">
-                                    <small class="text-secondary">By <strong>Dr. Ismail</strong> </small>
+                                    <small class="text-secondary">By <strong>Dr. Kamal</strong> </small>
                                 </div>
                                 <div
                                     class="mt-auto pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-between align-items-center">
@@ -230,13 +244,16 @@
                                         <button class="btn btn-sm btn-preview rounded-pill" data-bs-toggle="modal"
                                             data-bs-target="#coursePreviewModal"
                                             data-course-title="Full Stack Architecture" data-course-level="Expert"
-                                            data-course-duration="20 Weeks" data-course-instructor="Dr. Ismail"
+                                            data-course-duration="20 Weeks" data-course-instructor="Dr. Kamal"
                                             data-course-lessons="45 Lessons"
                                             data-course-description="Scale applications using React, Node, and Cloud infrastructure with industry best practices."
                                             data-course-learn="Microservices, AWS Deployment, Advanced React Patterns, System Design">
                                             Preview
                                         </button>
-                                        <button class="btn btn-sm btn-premium rounded-pill">Enroll</button>
+                                        <button type="button" class="btn btn-sm btn-premium rounded-pill"
+                                            data-bs-toggle="modal" data-bs-target="#loginRequiredModal">
+                                            Enroll Now
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -247,23 +264,39 @@
         </section>
     </main>
 
-     <footer class="footer-premium py-5 mt-5">
+    <footer class="footer-premium py-5 mt-5">
         <div class="container">
             <hr class="border-secondary opacity-10 mb-5">
 
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                    <h5 class="fw-bold text-white mb-2">
-                        <i class="bi bi-mortarboard-fill me-2" style="color: var(--premium-accent)"></i>LMS UTHM
+                <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+                    <h5
+                        class="fw-bold text-white mb-2 d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="img/uthmLogo.png" alt="Logo UTHM" class="me-3"
+                            style="height: 25px; width: auto; object-fit: contain; filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2))">
+                        <span style="letter-spacing: 0.5px;">Online Learning UTHM</span>
                     </h5>
-                    <p class="text-secondary small mb-1">Fundamentals of Web Technology (BIW10103)</p>
-                    <p class="text-secondary small mb-0">Instructor: Dr. Noryusliza Abdullah</p>
+                    <p class="text-secondary small mb-3">Fundamentals of Web Technology (BIW10103)</p>
+
+                    <div class="developer-section">
+                        <p class="text-secondary mb-2"
+                            style="font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7;">
+                            Developed By:
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Nuraizat</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Ilham Hazim</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Syahmi</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Ahmad Ismail</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Darwish Naufal</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-md-6 text-center text-md-end">
+                <div class="col-md-5 text-center text-md-end">
                     <div class="d-flex justify-content-center justify-content-md-end gap-3 mb-3">
                         <a href="#" class="footer-link text-secondary"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="footer-link text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="footer-link text-secondary"><i class="bi bi-x"></i></a>
                         <a href="#" class="footer-link text-secondary"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="footer-link text-secondary"><i class="bi bi-linkedin"></i></a>
                     </div>
@@ -275,52 +308,84 @@
         </div>
     </footer>
 
-<div class="modal fade" id="coursePreviewModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content border-secondary border-opacity-25" style="background-color: #0f172a; color: #f8fafc;">
-            <div class="modal-header border-secondary border-opacity-10">
-                <h5 class="modal-title fw-bold" id="modalTitle">Course Preview</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-4">
-                    <div class="col-md-7">
-                        <h6 class="text fw-bold mb-3 uppercase small">Overview Description </h6>
-                        <p id="modalDesc" class="text-secondary small mb-4"></p>
-                        
-                        <h6 class="text fw-bold mb-3 uppercase small">What You Will Learn</h6>
-                        <ul id="modalLearn" class="text-secondary small">
+    <div class="modal fade" id="coursePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-secondary border-opacity-25"
+                style="background-color: #0f172a; color: #f8fafc;">
+                <div class="modal-header border-secondary border-opacity-10">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Course Preview</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-7">
+                            <h6 class="text fw-bold mb-3 uppercase small">Overview Description </h6>
+                            <p id="modalDesc" class="text-secondary small mb-4"></p>
+
+                            <h6 class="text fw-bold mb-3 uppercase small">What You Will Learn</h6>
+                            <ul id="modalLearn" class="text-secondary small">
                             </ul>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="card p-3 border-secondary border-opacity-10" style="background-color: rgba(30, 41, 59, 0.5);">
-                            <div class="mb-3">
-                                <small class="text-secondary d-block">Instructor</small>
-                                <span id="modalInstructor" class="fw-bold text-secondary"></span>
-                            </div>
-                            <div class="mb-3">
-                                <small class="text-secondary d-block">Lessons </small>
-                                <span id="modalLessons" class="fw-bold text-secondary"></span>
-                            </div>
-                            <div class="mb-3">
-                                <small class="text-secondary d-block">Duration </small>
-                                <span id="modalDuration" class="fw-bold text-secondary"></span>
-                            </div>
-                            <div>
-                                <small class="text-secondary d-block">Course Level</small>
-                                <span id="modalLevel" class="badge-level bg-expert px-2 py-1"></span>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card p-3 border-secondary border-opacity-10"
+                                style="background-color: rgba(30, 41, 59, 0.5);">
+                                <div class="mb-3">
+                                    <small class="text-secondary d-block">Instructor</small>
+                                    <span id="modalInstructor" class="fw-bold text-secondary"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <small class="text-secondary d-block">Lessons </small>
+                                    <span id="modalLessons" class="fw-bold text-secondary"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <small class="text-secondary d-block">Duration </small>
+                                    <span id="modalDuration" class="fw-bold text-secondary"></span>
+                                </div>
+                                <div>
+                                    <small class="text-secondary d-block">Course Level</small>
+                                    <span id="modalLevel" class="badge-level bg-expert px-2 py-1"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer border-secondary border-opacity-10">
-                <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-premium rounded-pill px-4">Enroll Now</button>
+                <div class="modal-footer border-secondary border-opacity-10">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-premium rounded-pill px-4">Enroll Now</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="modal fade animate__animated animate__fadeIn" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-secondary border-opacity-25 shadow-lg"
+                style="background-color: #0f172a; border-radius: 1.5rem;">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="bi bi-lock-fill text-warning"
+                            style="font-size: 4rem; filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.3));"></i>
+                    </div>
+                    <h3 class="fw-bold text-white mb-3">Authentication Required</h3>
+                    <p class="text-secondary mb-4">
+                        You need to be logged in as a student to enroll in our courses and access the premium materials.
+                    </p>
+
+                    <div class="d-grid gap-2">
+                        <a href="login.html" class="btn btn-premium rounded-pill py-3 fw-bold">
+                            Login to Your Account
+                        </a>
+                        <button type="button" class="btn btn-link text-secondary text-decoration-none btn-sm"
+                            data-bs-dismiss="modal">
+                            Maybe Later, I'll Just Browse
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

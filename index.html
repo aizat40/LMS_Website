@@ -5,31 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="LMS UTHM - Premium Learning Management System">
-
+<link rel="icon" href="img/logotab.png" type="image/png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/styles.css">
 
-    <title>LMS UTHM</title>
+    <title>Dashboard || LMS UTHM</title>
 
 </head>
 
 <body>
-<div class="cursor-dot"></div>
-<div class="cursor-outline"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-   <header>
+    <header>
         <nav class="navbar navbar-expand-lg fixed-top py-3">
             <div class="container">
-                <a class="navbar-brand fs-3" href="#"><i class="bi bi-mortarboard-fill me-2"></i>LMS UTHM</a>
+                <a class="navbar-brand fs-3 fw-semibold text-light" href="index.php">
+                    <img src="img/uthmLogo.png" alt="Logo" class="me-2"
+                        style="height: 30px; filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2));">
+                    Online Learning UTHM
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link px-3 active" href="#">Home</a></li> 
+                        <li class="nav-item"><a class="nav-link px-3 active" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="courses.html">Course Catalog</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="community.html">Community</a></li>
                     </ul>
@@ -41,73 +45,86 @@
     </header>
 
     <main>
-       <section id="heroCarousel" class="carousel slide carousel-fade hero-section" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    </div>
+        <section id="heroCarousel" class="carousel slide carousel-fade hero-section" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
 
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInLeft">Empowering <span style="color: var(--premium-accent)">Digital Learners</span></h1>
-                        <p class="lead text-secondary mb-5 animate__animated animate__fadeInLeft">Join LMS UTHM to explore world-class courses and track your professional growth.</p>
-                        <div class="d-flex gap-3">
-                            <a href="courses.html" class="btn btn-premium animate__animated animate__fadeInLeft">Explore Catalog</a>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInLeft">Empowering
+                                    <span style="color: var(--premium-accent)">Digital Learners</span></h1>
+                                <p class="lead text-secondary mb-5 animate__animated animate__fadeInLeft">Join LMS UTHM
+                                    to explore world-class courses and track your professional growth.</p>
+                                <div class="d-flex gap-3">
+                                    <a href="courses.html"
+                                        class="btn btn-premium animate__animated animate__fadeInLeft">Explore
+                                        Catalog</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-5 mt-lg-0 animate__animated animate__fadeInRight">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&h=800&auto=format&fit=crop"
+                                    alt="Learning" class="img-fluid hero-img">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 mt-5 mt-lg-0 animate__animated animate__fadeInRight">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&h=800&auto=format&fit=crop" alt="Learning" class="img-fluid hero-img">
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInLeft">Learn from
+                                    <span style="color: var(--premium-accent)">Industry Experts</span></h1>
+                                <p class="lead text-secondary mb-5 animate__animated animate__fadeInLeft">Engage with
+                                    top-tier instructors and gain insights from academic leaders.</p>
+                                <div class="d-flex gap-3">
+                                    <a href="courses.html"
+                                        class="btn btn-premium animate__animated animate__fadeInLeft">Browse Courses</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-5 mt-lg-0 animate__animated animate__fadeInRight">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&h=800&auto=format&fit=crop"
+                                    alt="Experts" class="img-fluid hero-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInLeft">Track Your
+                                    <span style="color: var(--premium-accent)">Success</span></h1>
+                                <p class="lead text-secondary mb-5 animate__animated animate__fadeInLeft">Monitor your
+                                    learning journey and earn certificates upon course completion.</p>
+                                <div class="d-flex gap-3">
+                                    <a href="login.html"
+                                        class="btn btn-premium animate__animated animate__fadeInLeft">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-5 mt-lg-0 animate__animated animate__fadeInRight">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&h=800&auto=format&fit=crop"
+                                    alt="Progress" class="img-fluid hero-img">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInLeft">Learn from <span style="color: var(--premium-accent)">Industry Experts</span></h1>
-                        <p class="lead text-secondary mb-5 animate__animated animate__fadeInLeft">Engage with top-tier instructors and gain insights from academic leaders.</p>
-                        <div class="d-flex gap-3">
-                            <a href="courses.html" class="btn btn-premium animate__animated animate__fadeInLeft">Browse Courses</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-5 mt-lg-0 animate__animated animate__fadeInRight">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&h=800&auto=format&fit=crop" alt="Experts" class="img-fluid hero-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInLeft">Track Your <span style="color: var(--premium-accent)">Success</span></h1>
-                        <p class="lead text-secondary mb-5 animate__animated animate__fadeInLeft">Monitor your learning journey and earn certificates upon course completion.</p>
-                        <div class="d-flex gap-3">
-                            <a href="signup.html" class="btn btn-premium animate__animated animate__fadeInLeft">Get Started</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-5 mt-lg-0 animate__animated animate__fadeInRight">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&h=800&auto=format&fit=crop" alt="Progress" class="img-fluid hero-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon opacity-25"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon opacity-25"></span>
-    </button>
-</section>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon opacity-25"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon opacity-25"></span>
+            </button>
+        </section>
 
         <section class="py-5">
             <div class="container">
@@ -116,38 +133,43 @@
                         <div class="card p-4 animate__animated reveal" style="animation-delay: 0s;">
                             <i class="bi bi-shield-check fs-1 text-info mb-3"></i>
                             <h4 class="card-title fw-bold text-light">Secured Payment</h4>
-                            <p class="text-secondary small">Integrated with PayPal and credit card systems for paid courses</p>
+                            <p class="text-secondary small">Integrated with PayPal and credit card systems for paid
+                                courses</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card p-4 animate__animated reveal" style="animation-delay: 0.2s;">
                             <i class="bi bi-bar-chart-line fs-1 text-warning mb-3"></i>
                             <h4 class="card-title fw-bold text-light">Progress Tracking</h4>
-                            <p class="text-secondary small">Monitor your lessons and quizzes with detailed analytics.</p>
+                            <p class="text-secondary small">Monitor your lessons and quizzes with detailed analytics.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card p-4 animate__animated reveal" style="animation-delay: 0.4s;">
                             <i class="bi bi-patch-check fs-1 text-success mb-3"></i>
                             <h4 class="card-title fw-bold text-light">Digital Certificates</h4>
-                            <p class="text-secondary small">Earn official certificates and badges upon completion.</p>
+                            <p class="text-secondary small">Earn official certificates and badges upon completion your
+                                course.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-       <section class="py-5">
+        <section class="py-5">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold h1 animate__animated reveal" style="animation-delay: 0s;">Featured Courses</h2>
-                    <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Master skills from Beginner to Expert levels </p>
+                    <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Master skills from
+                        Beginner to Expert levels </p>
                 </div>
 
                 <div class="row g-4">
                     <div class="col-lg-4">
                         <div class="card overflow-hidden animate__animated reveal">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&h=600&auto=format&fit=crop" class="course-img" alt="Beginner Course">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&h=600&auto=format&fit=crop"
+                                class="course-img" alt="Beginner Course">
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge-level bg-beginner">Beginner</span>
@@ -155,9 +177,12 @@
                                 </div>
                                 <h4 class="card-title mb-2 text-light fw-bold">Web Design Fundamentals</h4>
                                 <p class="text-secondary small">Introduction to HTML and CSS for new developers. </p>
-                                <div class="mt-4 pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
+                                <div
+                                    class="mt-4 pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
                                     <small class="text-secondary"><i class="bi bi-clock me-1"></i> 10 Weeks </small>
-                                    <button class="btn btn-sm btn-enroll rounded-pill">Enroll Free</button>
+                                    <button type="button" class="btn btn-sm btn-enroll rounded-pill" data-bs-toggle="modal" data-bs-target="#loginRequiredModal">
+        Enroll Now
+    </button>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +190,8 @@
 
                     <div class="col-lg-4">
                         <div class="card overflow-hidden animate__animated reveal" style="animation-delay: 0.2s;">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&h=600&auto=format&fit=crop" class="course-img" alt="Intermediate Course">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&h=600&auto=format&fit=crop"
+                                class="course-img" alt="Intermediate Course">
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge-level bg-intermediate">Intermediate</span>
@@ -173,9 +199,12 @@
                                 </div>
                                 <h4 class="card-title mb-2 text-light fw-bold">JavaScript Mastery</h4>
                                 <p class="text-secondary small">Deep dive into logic, DOM, and ES6+ features. </p>
-                                <div class="mt-4 pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
+                                <div
+                                    class="mt-4 pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
                                     <small class="text-secondary"><i class="bi bi-clock me-1"></i> 12 Weeks </small>
-                                    <button class="btn btn-sm btn-enroll rounded-pill">Enroll Now</button>
+                                    <button type="button" class="btn btn-sm btn-enroll rounded-pill" data-bs-toggle="modal" data-bs-target="#loginRequiredModal">
+        Enroll Now
+    </button>
                                 </div>
                             </div>
                         </div>
@@ -183,17 +212,22 @@
 
                     <div class="col-lg-4">
                         <div class="card overflow-hidden animate__animated reveal" style="animation-delay: 0.4s;">
-                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&h=600&auto=format&fit=crop" class="course-img" alt="Expert Course">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&h=600&auto=format&fit=crop"
+                                class="course-img" alt="Expert Course">
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge-level bg-expert">Expert</span>
                                     <span class="text-warning"><i class="bi bi-star-fill"></i> 5.0 </span>
                                 </div>
                                 <h4 class="card-title mb-2 text-light fw-bold">Full Stack Architecture</h4>
-                                <p class="text-secondary small">Building scalable applications with modern frameworks. </p>
-                                <div class="mt-4 pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
+                                <p class="text-secondary small">Building scalable applications with modern.
+                                </p>
+                                <div
+                                    class="mt-4 pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
                                     <small class="text-secondary"><i class="bi bi-clock me-1"></i> 20 Weeks </small>
-                                    <button class="btn btn-sm btn-enroll rounded-pill">Enroll Now</button>
+                                    <button type="button" class="btn btn-sm btn-enroll rounded-pill" data-bs-toggle="modal" data-bs-target="#loginRequiredModal">
+        Enroll Now
+    </button>
                                 </div>
                             </div>
                         </div>
@@ -201,145 +235,174 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-    <a href="courses.html" class="btn btn-premium btn-lg px-3 py-2 animate__animated reveal" style="animation-delay: 0.6s;">
-        <i class="bi bi-search me-2"></i>Browse All Courses
-    </a>
-    <p class="text-secondary mt-3 small">Explore our full catalog of over 50+ professional courses</p>
-</div>
+                <a href="courses.html" class="btn btn-premium btn-lg px-3 py-2 animate__animated reveal"
+                    style="animation-delay: 0.6s;">
+                    <i class="bi bi-search me-2"></i>Browse All Courses
+                </a>
+                <p class="text-secondary mt-3 small">Explore our full catalog of over 50+ professional courses</p>
+            </div>
         </section>
 
         <section class="py-5 border-top border-secondary border-opacity-10">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold h1 animate__animated reveal" style="animation-delay: 0s;">Meet Our Top Instructors</h2>
-            <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Learn from industry leaders and world-class academic experts</p>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-3 col-md-6">
-                <div class="card p-4 text-center instructor-card animate__animated reveal" style="animation-delay: 0.1s;">
-                    <div class="instructor-img-wrapper mb-3 mx-auto">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ali" class="rounded-circle shadow-sm" alt="Instructor 1">
-                    </div>
-                    <h5 class="fw-bold text-light mb-1">Dr. Ali</h5>
-                    <p class="text-secondary small mb-3">Senior Web Architect</p>
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-twitter"></i></a>
-                    </div>
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold h1 animate__animated reveal" style="animation-delay: 0s;">Meet Our Top
+                        Instructors</h2>
+                    <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Learn from
+                        industry leaders and world-class academic experts</p>
                 </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6">
-                <div class="card p-4 text-center instructor-card animate__animated reveal" style="animation-delay: 0.3s;">
-                    <div class="instructor-img-wrapper mb-3 mx-auto">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Siti" class="rounded-circle shadow-sm" alt="Instructor 2">
-                    </div>
-                    <h5 class="fw-bold text-light mb-1">Pn. Siti</h5>
-                    <p class="text-secondary small mb-3">UI/UX Strategy Lead</p>
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card p-4 text-center instructor-card animate__animated reveal" style="animation-delay: 0.5s;">
-                    <div class="instructor-img-wrapper mb-3 mx-auto">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ismail" class="rounded-circle shadow-sm" alt="Instructor 3">
-                    </div>
-                    <h5 class="fw-bold text-light mb-1">Dr. Ismail</h5>
-                    <p class="text-secondary small mb-3">Full Stack Developer</p>
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 bg-opacity-10" style="background-color: rgba(30, 41, 59, 0.5);">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold h1 animate__animated reveal">What Our Students Say</h2>
-            <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Real experiences from students across UTHM</p>
-        </div>
-
-        <div id="studentCarousel" class="carousel slide animate__animated reveal" data-bs-ride="carousel" style="animation-delay: 0.4s;">
-            <div class="carousel-indicators" style="bottom: -50px;">
-                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="2"></button>
-            </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="card p-5 border-0 bg-transparent text-center">
-                                <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
-                                <p class="fs-4 fst-italic text-light mb-4">"The progress tracker feature is amazing! It helps me stay on top of my lessons and quizzes effectively."</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmad" class="rounded-circle me-3 border border-primary p-1" width="60" alt="Student 1">
-                                    <div class="text-start">
-                                        <h6 class="fw-bold mb-0 text-white">Ahmad Daniel</h6>
-                                        <small class="text-secondary">FSKTM Student</small>
-                                    </div>
-                                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card p-4 text-center instructor-card animate__animated reveal"
+                            style="animation-delay: 0.1s;">
+                            <div class="instructor-img-wrapper mb-3 mx-auto">
+                                <img src="img/ali.jpg" class="rounded-circle shadow-sm" alt="Instructor 1">
+                            </div>
+                            <h5 class="fw-bold text-light mb-1">Dr. Ali</h5>
+                            <p class="text-secondary small mb-3">Senior Web Architect</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                        class="bi bi-linkedin"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                        class="bi bi-twitter"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="card p-5 border-0 bg-transparent text-center">
-                                <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
-                                <p class="fs-4 fst-italic text-light mb-4">"Finding courses in the catalog is so intuitive. The filters for difficulty levels make it easy to choose where to start."</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" class="rounded-circle me-3 border border-primary p-1" width="60" alt="Student 2">
-                                    <div class="text-start">
-                                        <h6 class="fw-bold mb-0 text-white">Sarah Lim</h6>
-                                        <small class="text-secondary">Engineering Student</small>
-                                    </div>
-                                </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card p-4 text-center instructor-card animate__animated reveal"
+                            style="animation-delay: 0.3s;">
+                            <div class="instructor-img-wrapper mb-3 mx-auto">
+                                <img src="img/siti.jpg" class="rounded-circle shadow-sm" alt="Instructor 2">
+                            </div>
+                            <h5 class="fw-bold text-light mb-1">Pn. Siti</h5>
+                            <p class="text-secondary small mb-3">UI/UX Strategy Lead</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                        class="bi bi-linkedin"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                        class="bi bi-instagram"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="card p-5 border-0 bg-transparent text-center">
-                                <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
-                                <p class="fs-4 fst-italic text-light mb-4">"I love how mobile-friendly this LMS is. I can track my progress and watch modules even on my smartphone."</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ismail" class="rounded-circle me-3 border border-primary p-1" width="60" alt="Student 3">
-                                    <div class="text-start">
-                                        <h6 class="fw-bold mb-0 text-white">Aizat Haris</h6>
-                                        <small class="text-secondary">Information Technology Student</small>
-                                    </div>
-                                </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card p-4 text-center instructor-card animate__animated reveal"
+                            style="animation-delay: 0.5s;">
+                            <div class="instructor-img-wrapper mb-3 mx-auto">
+                                <img src="img/kamal.jpg" class="rounded-circle shadow-sm" alt="Instructor 3">
+                            </div>
+                            <h5 class="fw-bold text-light mb-1">Dr. Kamal</h5>
+                            <p class="text-secondary small mb-3">Full Stack Developer</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                        class="bi bi-linkedin"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                        class="bi bi-github"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon p-3 rounded-circle bg-dark border border-secondary"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon p-3 rounded-circle bg-dark border border-secondary"></span>
-            </button>
-        </div>
-    </div>
-</section>
+        <section class="py-5 bg-opacity-10" style="background-color: rgba(30, 41, 59, 0.5);">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold h1 animate__animated reveal">What Our Students Say</h2>
+                    <p class="text-secondary animate__animated reveal" style="animation-delay: 0.2s;">Real experiences
+                        from students across UTHM</p>
+                </div>
+
+                <div id="studentCarousel" class="carousel slide animate__animated reveal" data-bs-ride="carousel"
+                    style="animation-delay: 0.4s;">
+                    <div class="carousel-indicators" style="bottom: -50px;">
+                        <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="card p-5 border-0 bg-transparent text-center">
+                                        <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
+                                        <p class="fs-4 fst-italic text-light mb-4">"The progress tracker feature is
+                                            amazing! It helps me stay on top of my lessons and quizzes effectively."</p>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="img/aizat.png"
+                                                class="rounded-circle me-3 border border-primary p-1" width="60"
+                                                alt="Student 1">
+                                            <div class="text-start">
+                                                <h6 class="fw-bold mb-0 text-white">Ahmad Daniel</h6>
+                                                <small class="text-secondary">FSKTM Student</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="card p-5 border-0 bg-transparent text-center">
+                                        <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
+                                        <p class="fs-4 fst-italic text-light mb-4">"Finding courses in the catalog is so
+                                            intuitive. The filters for difficulty levels make it easy to choose where to
+                                            start."</p>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="img/isya.png"
+                                                class="rounded-circle me-3 border border-primary p-1" width="60"
+                                                alt="Student 2">
+                                            <div class="text-start">
+                                                <h6 class="fw-bold mb-0 text-white">Sarah</h6>
+                                                <small class="text-secondary">Engineering Student</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="card p-5 border-0 bg-transparent text-center">
+                                        <i class="bi bi-quote fs-1 text-primary mb-4 opacity-50"></i>
+                                        <p class="fs-4 fst-italic text-light mb-4">"I love how mobile-friendly this LMS
+                                            is. I can track my progress and watch modules even on my smartphone."</p>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="img/sya.png"
+                                                class="rounded-circle me-3 border border-primary p-1" width="60"
+                                                alt="Student 3">
+                                            <div class="text-start">
+                                                <h6 class="fw-bold mb-0 text-white">Syahirah</h6>
+                                                <small class="text-secondary">Information Technology Student</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel"
+                        data-bs-slide="prev">
+                        <span
+                            class="carousel-control-prev-icon p-3 rounded-circle bg-dark border border-secondary"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel"
+                        data-bs-slide="next">
+                        <span
+                            class="carousel-control-next-icon p-3 rounded-circle bg-dark border border-secondary"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer-premium py-5 mt-5">
@@ -347,18 +410,34 @@
             <hr class="border-secondary opacity-10 mb-5">
 
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                    <h5 class="fw-bold text-white mb-2">
-                        <i class="bi bi-mortarboard-fill me-2" style="color: var(--premium-accent)"></i>LMS UTHM
+                <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+                    <h5
+                        class="fw-bold text-white mb-2 d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="img/uthmLogo.png" alt="Logo UTHM" class="me-3"
+                            style="height: 25px; width: auto; object-fit: contain; filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.2))">
+                        <span style="letter-spacing: 0.5px;">Online Learning UTHM</span>
                     </h5>
-                    <p class="text-secondary small mb-1">Fundamentals of Web Technology (BIW10103)</p>
-                    <p class="text-secondary small mb-0">Instructor: Dr. Noryusliza Abdullah</p>
+                    <p class="text-secondary small mb-3">Fundamentals of Web Technology (BIW10103)</p>
+
+                    <div class="developer-section">
+                        <p class="text-secondary mb-2"
+                            style="font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7;">
+                            Developed By:
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Nuraizat</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Ilham Hazim</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Syahmi</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Ahmad Ismail</span>
+                            <span class="dev-chip"><i class="bi bi-person-fill me-1"></i>Darwish Naufal</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-md-6 text-center text-md-end">
+                <div class="col-md-5 text-center text-md-end">
                     <div class="d-flex justify-content-center justify-content-md-end gap-3 mb-3">
                         <a href="#" class="footer-link text-secondary"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="footer-link text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="footer-link text-secondary"><i class="bi bi-x"></i></a>
                         <a href="#" class="footer-link text-secondary"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="footer-link text-secondary"><i class="bi bi-linkedin"></i></a>
                     </div>
@@ -370,8 +449,33 @@
         </div>
     </footer>
 
-    
+<div class="modal fade animate__animated animate__fadeIn" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-secondary border-opacity-25 shadow-lg" style="background-color: #0f172a; border-radius: 1.5rem;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-lock-fill text-warning" style="font-size: 4rem; filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.3));"></i>
+                </div>
+                <h3 class="fw-bold text-white mb-3">Authentication Required</h3>
+                <p class="text-secondary mb-4">
+                    You need to be logged in as a student to enroll in our courses and access the premium materials.
+                </p>
+
+                <div class="d-grid gap-2">
+                    <a href="login.html" class="btn btn-premium rounded-pill py-3 fw-bold">
+                        Login to Your Account
+                    </a>
+                    <button type="button" class="btn btn-link text-secondary text-decoration-none btn-sm" data-bs-dismiss="modal">
+                        Maybe Later, I'll Just Browse
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
+
 </html>

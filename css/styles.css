@@ -29,6 +29,9 @@ main {
     min-height: 70vh;
 }
 
+html{
+    scroll-behavior: smooth;
+}
  /* Course Hero Styling */
 .course-hero-bg {
     position: relative;
@@ -76,8 +79,7 @@ main {
  }
 
  .navbar-brand {
-     font-weight: 800;
-     color: var(--premium-accent) !important;
+     font-weight: 800;;
      letter-spacing: -1px;
  }
 
@@ -532,4 +534,88 @@ main {
 /* Ensure branding icon matches the theme color */
 .footer-premium h5 i {
     text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+
+/* Gaya Input & Textarea Premium */
+.modal-content .form-control, 
+.modal-content .form-select {
+    background-color: rgba(255, 255, 255, 0.05); /* Latar belakang separa lutsinar */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f8fafc; /* Warna teks off-white */
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hilangkan outline biru asal Bootstrap dan ganti dengan glow violet */
+.modal-content .form-control:focus, 
+.modal-content .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--premium-accent); /* Menggunakan warna violet anda */
+    color: #fff;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15); /* Glow halus */
+    outline: none;
+}
+
+/* Warna placeholder */
+.modal-content .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+/* Gaya khas untuk Select Dropdown (Warna pilihan di dalam) */
+.modal-content .form-select option {
+    background-color: #0f172a; /* Warna gelap supaya teks boleh dibaca */
+    color: #fff;
+}
+
+.shadow-accent {
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2); /* Glow violet yang sangat halus */
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* Gaya Chip untuk Nama Developer */
+.developer-chip {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(248, 250, 252, 0.8);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Gaya Developer Chips */
+.dev-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+}
+
+.dev-chip i {
+    color: var(--premium-accent); /* Menggunakan warna violet anda */
+}
+
+.dev-chip:hover {
+    background: var(--premium-accent);
+    color: white;
+    transform: translateY(-3px);
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    cursor: default;
+}
+
+.dev-chip:hover i {
+    color: white;
 }

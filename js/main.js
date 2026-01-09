@@ -227,4 +227,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Ambil parameter daripada URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('posting');
+
+    // 2. Hanya tunjukkan modal JIKA status adalah 'success'
+    if (status === 'success') {
+        const successModalElement = document.getElementById('success');
+        
+        // Pastikan element modal wujud sebelum panggil
+        if (successModalElement) {
+            const successModal = new bootstrap.Modal(successModalElement);
+            successModal.show();
+
+            // 3. Bersihkan URL (buang ?status=success) supaya modal tak muncul bila refresh
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Ambil parameter daripada URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('msg');
+
+    // 2. Hanya tunjukkan modal JIKA status adalah 'success'    
+    if (status === 'success') {
+        const successModalElement = document.getElementById('successpayment');
+        
+        // Pastikan element modal wujud sebelum panggil
+        if (successModalElement) {
+            const successModal = new bootstrap.Modal(successModalElement);
+            successModal.show();
+
+            // 3. Bersihkan URL (buang ?status=success) supaya modal tak muncul bila refresh
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }
+});
 
